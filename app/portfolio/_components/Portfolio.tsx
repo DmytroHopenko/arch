@@ -18,14 +18,17 @@ export const Portfolio = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {portfolioList.map((portfolio, index) => (
-        <motion.div className="relative mx-auto lg:mx-0" key={portfolio.id}
-        initial={{ opacity: 0, y: 50 }}
+        <motion.div
+          className="relative mx-auto lg:mx-0"
+          key={portfolio.id}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,  
+            duration: 0.8,
             ease: "easeOut",
             delay: index * 0.3,
-          }}>
+          }}
+        >
           <Image
             src={portfolio.mobileSrc}
             alt={portfolio.name}
